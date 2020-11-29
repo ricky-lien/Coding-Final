@@ -1,0 +1,9 @@
+import matplotlib.pyplot as plt 
+import pandas as pd 
+#import data 
+df = pd.read_csv("/Users/ericalien/Downloads/2019.csv") 
+#plot 
+df.groupby('Country or region').mean()['GDP per capita'].plot(kind='bar') 
+plt.ylim(ymin=0) 
+plt.ylabel('GDP per capita') 
+plt.show()
