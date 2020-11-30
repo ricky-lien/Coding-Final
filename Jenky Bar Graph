@@ -1,0 +1,9 @@
+import matplotlib.pyplot as plt 
+import pandas as pd 
+#import data 
+df = pd.read_csv("/Users/ericalien/Downloads/Iceland.csv") 
+#plot 
+df.groupby('Metrics').mean()['Iceland'].plot(kind='bar') 
+plt.ylim(ymin=0) 
+plt.ylabel('Iceland') 
+plt.show()
